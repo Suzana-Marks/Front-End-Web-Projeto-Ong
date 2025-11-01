@@ -1,0 +1,42 @@
+/* ===================================================================
+   MÓDULO: _base.css (Reset, Tipografia e Estilos Globais Mobile-First)
+   =================================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+html {
+    font-size: 100%; 
+}
+
+body {
+    background-color: var(--cor-fundo-claro); 
+    color: var(--cor-texto-principal);
+    font-family: var(--fonte-corpo);
+    line-height: 1.6;
+    padding-bottom: var(--espaco-xxl); 
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--fonte-titulo);
+    line-height: 1.2;
+    color: var(--cor-primaria-fundo); 
+    margin-bottom: var(--espaco-sm);
+}
+
+h1 { font-size: var(--tamanho-xl); } 
+h2 { font-size: var(--tamanho-lg); } 
+h3 { font-size: var(--tamanho-md); }
+
+a {
+    color: var(--cor-secundaria-acao); 
+    text-decoration: none;
+    transition: color 0.3s;
+}
+a:hover {
+    color: var(--cor-primaria-fundo);
+    text-decoration: underline;
+}

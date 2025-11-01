@@ -1,0 +1,80 @@
+/* ===================================================================
+   MÓDULO: _layout.css (CSS Grid de 12 Colunas e Media Queries)
+   =================================================================== */
+
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 var(--espaco-sm); 
+    margin-top: var(--espaco-xl);
+}
+
+.grid-12 {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: var(--espaco-md); 
+}
+
+footer {
+    background-color: var(--cor-fundo-escuro);
+    color: var(--cor-secundaria-suave);
+    padding: var(--espaco-md) var(--espaco-sm);
+    text-align: center;
+    display: flex;
+    flex-direction: column; 
+    gap: var(--espaco-sm);
+}
+
+/* --- BREAKPOINTS RESPONSIVOS --- */
+
+/* 1. TABLETS PEQUENOS (min-width: 600px) */
+@media (min-width: 600px) {
+    .grid-12 {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+/* 2. TABLETS GRANDES (min-width: 768px) */
+@media (min-width: 768px) {
+    .grid-12 {
+        grid-template-columns: repeat(4, 1fr); 
+    }
+    footer {
+        flex-direction: row; 
+        justify-content: space-between;
+    }
+}
+
+/* 3. DESKTOPS PEQUENOS (min-width: 992px) - 12 COLUNAS */
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px; 
+        padding: 0;
+    }
+
+    .grid-12 {
+        grid-template-columns: repeat(12, 1fr); 
+    }
+
+    /* Classes para Span */
+    .col-span-3 { grid-column: span 3; } 
+    .col-span-4 { grid-column: span 4; } 
+    .col-span-6 { grid-column: span 6; } 
+    .col-span-8 { grid-column: span 8; } 
+    .col-span-12 { grid-column: span 12; }
+}
+
+/* 4. DESKTOPS PADRÃO (min-width: 1200px) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+/* 5. TELAS GRANDES (min-width: 1400px) */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+}

@@ -1,0 +1,36 @@
+/* ===================================================================
+   MÓDULO: _variables.css (Design System: Cores, Fontes e Espaçamento)
+   =================================================================== */
+
+:root {
+    /* 1. PALETA DE CORES (Alegre e Vívida) - MÍNIMO 8 CORES */
+    --cor-primaria-fundo: #008f8c;    /* Verde Água Escuro */
+    --cor-primaria-texto: #ffffff;   /* Branco Puro */
+
+    --cor-secundaria-acao: #ff9f1c;  /* Laranja Vibrante */
+    --cor-secundaria-foco: #ffc300;   /* Amarelo Ouro (Alegria) */
+    --cor-secundaria-suave: #e0f2f1; /* Verde/Azul muito claro */
+
+    --cor-fundo-claro: #f4f6f9;      /* Cinza Quase Branco */
+    --cor-fundo-escuro: #1d2125;     /* Preto Quase Total */
+    --cor-texto-principal: #333333;  /* Cinza Escuro */
+    --cor-borda-suave: #dddddd;      /* Cinza Claro para divisões */
+
+    /* 2. TIPOGRAFIA (MÍNIMO 5 TAMANHOS) */
+    --fonte-corpo: 'Open Sans', sans-serif;
+    --fonte-titulo: 'Montserrat', sans-serif;
+
+    --tamanho-xs: 0.75rem;    
+    --tamanho-sm: 1rem;       
+    --tamanho-md: 1.5rem;     
+    --tamanho-lg: 2rem;       
+    --tamanho-xl: 3rem;       
+
+    /* 3. ESPAÇAMENTO MODULAR (8X) - MÍNIMO 6 ESPAÇOS */
+    --espaco-xs: 0.5rem;   
+    --espaco-sm: 1rem;     
+    --espaco-md: 1.5rem;   
+    --espaco-lg: 2rem;     
+    --espaco-xl: 3rem;     
+    --espaco-xxl: 4rem;    
+}

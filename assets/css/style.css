@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Open+Sans:wght@400;600&display=swap');
+
+@import url("./modules/_variables.css");  
+
+@import url("./modules/_base.css");       
+
+@import url("./modules/_theme.css"); 
+
+@import url("./modules/_layout.css");     
+
+@import url("./modules/_header.css");     
+
+@import url("./modules/_components.css");

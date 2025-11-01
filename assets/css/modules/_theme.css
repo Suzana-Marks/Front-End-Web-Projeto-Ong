@@ -1,0 +1,70 @@
+/* assets/css/modules/_theme.css */
+
+/* --- Estilos para o Controle de Temas --- */
+.theme-controls {
+    text-align: right;
+    padding: var(--espaco-sm) 0;
+    margin-top: var(--espaco-xs); 
+}
+
+.btn-theme-control {
+    /* Baseia-se no Design System */
+    background-color: var(--cor-primaria-fundo);
+    color: var(--cor-primaria-texto);
+    border: none;
+    padding: 5px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 0.9em;
+    transition: background-color 0.3s;
+}
+
+.btn-theme-control:hover {
+    background-color: #006664; /* Um pouco mais escuro que o primário */
+}
+
+/* --- 1. MODO ESCURO (CLASSE body.dark-mode) --- */
+
+body.dark-mode {
+    /* Novas variáveis de fundo e texto para Dark Mode */
+    --cor-fundo-claro: #1c1c1c;      /* Fundo escuro */
+    --cor-texto-principal: #f0f0f0;  /* Texto claro */
+    --cor-primaria-fundo: #00a8a4;   /* Cor primária mais suave */
+    --cor-borda-suave: #555;
+}
+
+body.dark-mode .card {
+    background-color: #333;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+/* --- 2. ALTO CONTRASTE (CLASSE body.high-contrast) - WCAG 2.1 AA --- */
+
+body.high-contrast {
+    /* Cores Extremas para Acessibilidade */
+    --cor-fundo-claro: #fff;
+    --cor-texto-principal: #000;
+    --cor-primaria-fundo: #000;
+    --cor-secundaria-acao: #ff0; /* Amarelo Vibrante para Foco */
+    --cor-primaria-texto: #000;
+    --cor-borda-suave: #000;
+}
+
+body.high-contrast h1,
+body.high-contrast h2 {
+    color: #000;
+}
+
+body.high-contrast a,
+body.high-contrast button {
+    color: #000 !important;
+    font-weight: bold;
+    text-decoration: underline;
+    border: 1px solid #000;
+}
+
+body.high-contrast .btn-cta, 
+body.high-contrast .btn-theme-control {
+    background-color: #ff0 !important; /* Destaque amarelo */
+}

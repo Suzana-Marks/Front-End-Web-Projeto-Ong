@@ -1,0 +1,108 @@
+/* ===================================================================
+   MÓDULO: _header.css (Estilização do Cabeçalho e Navegação)
+   =================================================================== */
+
+header {
+    background-color: var(--cor-primaria-fundo); 
+    padding: var(--espaco-sm) var(--espaco-md);
+    color: var(--cor-primaria-texto);
+    position: sticky; 
+    top: 0;
+    z-index: 100;
+    
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+header > a {
+    display: flex; 
+    align-items: center;
+    color: var(--cor-primaria-texto);
+    text-decoration: none;
+}
+
+header img {
+    width: 40px;
+    height: 40px;
+    margin-right: var(--espaco-xs); 
+}
+
+header h1 {
+    font-size: var(--tamanho-sm);
+    color: var(--cor-primaria-texto);
+    margin-bottom: 0;
+}
+
+.menu-toggle {
+    display: block; 
+    background: none;
+    border: none;
+    color: var(--cor-primaria-texto);
+    font-size: var(--tamanho-md); 
+    cursor: pointer;
+    padding: 0;
+}
+
+.nav-menu {
+    display: none; /* Escondido por padrão (Mobile-First) */
+    
+    flex-direction: column;
+    position: absolute; 
+    left: 0;
+    top: 100%; 
+    width: 100%;
+    background-color: var(--cor-primaria-fundo);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.nav-menu li a {
+    display: block;
+    padding: var(--espaco-sm) var(--espaco-md);
+    color: var(--cor-primaria-texto);
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    transition: background-color 0.3s;
+}
+
+.nav-menu.active {
+    display: flex; 
+}
+
+/* --- DESKTOPS --- */
+@media (min-width: 992px) {
+    header {
+        position: static; 
+        justify-content: flex-start; 
+        gap: var(--espaco-xl); 
+    }
+
+    .menu-toggle {
+        display: none; 
+    }
+
+    .nav-menu {
+        display: flex !important; 
+        flex-direction: row; 
+        position: static;
+        width: auto;
+        margin-left: auto; 
+    }
+
+    .nav-menu ul {
+        display: flex;
+        gap: var(--espaco-md);
+        align-items: center;
+    }
+
+    .nav-menu li a {
+        padding: 0;
+        border-top: none;
+    }
+}
