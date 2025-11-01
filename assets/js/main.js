@@ -19,3 +19,4 @@ document.addEventListener('DOMContentLoaded', () => {
     // 4. Controle de Temas de Acessibilidade (NOVA INICIALIZAÇÃO)
     initThemeToggle(); 
 });
+
