@@ -31,13 +31,4 @@ Desenvolver uma plataforma web completa e profissional para o **Instituto Caminh
 
 ---
 
-
-    git commit -m "feat(final): Projeto completo. Implementa SPA, WCAG (Modo Escuro/Alto Contraste) e finaliza documentacao v1.0.0"
-    ```
-
-3.  **Enviar todas as alterações para o GitHub:**
-    ```bash
-    git push
-    ```
-
 Quando o `git push` for concluído com sucesso, **crie a Tag de Release `v1.0.0`** diretamente
