@@ -31,17 +31,7 @@ Desenvolver uma plataforma web completa e profissional para o **Instituto Caminh
 
 ---
 
-## 🚀 Envio Final para o GitHub
 
-Com o Codespaces, o processo é simples. Execute estes comandos no terminal para enviar a versão final e criar a tag de Release:
-
-1.  **Adicionar todas as alterações:**
-    ```bash
-    git add .
-    ```
-
-2.  **Criar o Commit Semântico Final (com todos os arquivos agora presentes):**
-    ```bash
     git commit -m "feat(final): Projeto completo. Implementa SPA, WCAG (Modo Escuro/Alto Contraste) e finaliza documentacao v1.0.0"
     ```
 
