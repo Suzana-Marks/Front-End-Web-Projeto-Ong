@@ -106,3 +106,24 @@ header h1 {
         border-top: none;
     }
 }
+/* FORÇAR VISUALIZAÇÃO DE DESKTOP EM TELAS GRANDES */
+@media (min-width: 992px) {
+    .nav-menu {
+        /* Garante que o menu principal seja exibido horizontalmente no desktop */
+        display: flex !important; 
+        flex-direction: row; 
+        position: static; /* Remove o comportamento de drop-down */
+        width: auto;
+        margin-left: auto; 
+    }
+
+    .nav-menu ul {
+        display: flex;
+        list-style: none; /* Remove as bolinhas */
+    }
+
+    /* Esconder o ícone hambúrguer */
+    .menu-toggle {
+        display: none !important;
+    }
+}
