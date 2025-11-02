@@ -31,4 +31,3 @@ Desenvolver uma plataforma web completa e profissional para o **Instituto Caminh
 
 ---
 
-Quando o `git push` for concluído com sucesso, **crie a Tag de Release `v1.0.0`** diretamente
