@@ -1,5 +1,5 @@
 /* ===================================================================
-   MÓDULO: _header.css (Estilização do Cabeçalho e Navegação)
+   MÓDULO: _header.css (Estilização Final do Cabeçalho e Navegação)
    =================================================================== */
 
 header {
@@ -10,11 +10,13 @@ header {
     top: 0;
     z-index: 100;
     
+    /* Mobile: Alinha logo e hambúrguer */
     display: flex;
     justify-content: space-between; 
     align-items: center;
 }
 
+/* --- ESTILO DO LOGO E TÍTULO --- */
 header > a {
     display: flex; 
     align-items: center;
@@ -34,6 +36,7 @@ header h1 {
     margin-bottom: 0;
 }
 
+/* --- ESTILO DO BOTÃO HAMBÚRGUER (Visível no Mobile) --- */
 .menu-toggle {
     display: block; 
     background: none;
@@ -44,6 +47,7 @@ header h1 {
     padding: 0;
 }
 
+/* --- ESTILO DO MENU DROPDOWN (Mobile) --- */
 .nav-menu {
     display: none; /* Escondido por padrão (Mobile-First) */
     
@@ -75,55 +79,40 @@ header h1 {
     display: flex; 
 }
 
-/* --- DESKTOPS --- */
+/* =======================================
+   BREAKPOINT: DESKTOPS (min-width: 992px)
+   ======================================= */
 @media (min-width: 992px) {
     header {
+        /* Alinhamento do cabeçalho de desktop */
         position: static; 
         justify-content: flex-start; 
         gap: var(--espaco-xl); 
     }
 
-    .menu-toggle {
-        display: none; 
-    }
-
+    /* 1. O menu principal deve ser visível e horizontal */
     .nav-menu {
-        display: flex !important; 
+        display: flex !important; /* FORÇA VISIBILIDADE E SOBRESCREVE DISPLAY:NONE */
         flex-direction: row; 
-        position: static;
+        position: static; 
         width: auto;
-        margin-left: auto; 
+        margin-left: auto; /* Empurra os links para a direita */
     }
 
     .nav-menu ul {
         display: flex;
         gap: var(--espaco-md);
         align-items: center;
+        list-style: none;
+    }
+
+    /* 2. Ocultar o botão hambúrguer no desktop */
+    .menu-toggle {
+        display: none !important;
     }
 
     .nav-menu li a {
         padding: 0;
         border-top: none;
-    }
-}
-/* FORÇAR VISUALIZAÇÃO DE DESKTOP EM TELAS GRANDES */
-@media (min-width: 992px) {
-    .nav-menu {
-        /* Garante que o menu principal seja exibido horizontalmente no desktop */
-        display: flex !important; 
-        flex-direction: row; 
-        position: static; /* Remove o comportamento de drop-down */
-        width: auto;
-        margin-left: auto; 
-    }
-
-    .nav-menu ul {
-        display: flex;
-        list-style: none; /* Remove as bolinhas */
-    }
-
-    /* Esconder o ícone hambúrguer */
-    .menu-toggle {
-        display: none !important;
     }
 }
